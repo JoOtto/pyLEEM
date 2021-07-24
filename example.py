@@ -4,7 +4,7 @@ import os
 #%%
 #Test = SpecsNLP(r"C:\Data\LEEM Data\20210714-203124.nlp")
 #Test = SpecsNLP(r"C:\Data\LEEM Data\20210715-115719_1.nlp")
-Test = SpecsNLP(os.path.join("test", "20190223_190508_6.8um_349.0_test.nlp"))
+Test = SpecsNLP(os.path.join("./tests", "data", "20190223_185646_5.7um_349.0_test_ESCHER.nlp"))
 
 #%%
 import napari
