@@ -1,0 +1,6 @@
+numpy
+xarray
+tqdm
+
+# For easy viewing
+napari

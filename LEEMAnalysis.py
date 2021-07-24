@@ -150,11 +150,11 @@ class SpecsNLP:
 
     def load_frame_data(self, data_slice=np.s_[:]):
         """
-        Loaded the frames into the Dataset self.ds
+        Load the frames into the Dataset self.ds
 
         Parameters
         ----------
-        data_slice : numpy slice , optional
+        data_slice : numpy slice, optional
             Directly determines the frames which are loaded. The default is np.s_[:] which loads all frames.
 
         Returns
