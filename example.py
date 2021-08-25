@@ -1,4 +1,4 @@
-from LEEMAnalysis import SpecsNLP
+from pyLEEM.LEEMAnalysis import SpecsNLP
 import os
 
 #%%

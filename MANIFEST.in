@@ -1,0 +1,7 @@
+include README.rst
+include LICENSE
+include requirements.txt
+graft pyLEEM
+recursive-exclude * *.py[co]
+include versioneer.py
+include pyLEEM/_version.py
