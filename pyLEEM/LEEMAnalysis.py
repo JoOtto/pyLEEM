@@ -190,14 +190,14 @@ class SpecsNLP:
 
                 else:
                     if self.ds.compression_code[i] == 3:
-                        tdata[i, :, :] = np.frombuffer(zlib.decompress(binary_image), dtype='<i2').cumsum().astype(
-                            np.uint8).astype(int).reshape((height, width))
+                        tdata[i, :, :] = np.frombuffer(zlib.decompress(binary_image), dtype='<i2').cumsum().reshape(
+                            (height, width))
                     else:
                         tdata[i, :, :] = np.frombuffer(binary_image, dtype='<u2').reshape((height, width))
 
                 self.ds.max_counts[i] = tdata[i, :, :].max()
                 self.ds.min_counts[i] = tdata[i, :, :].min()
 
-        self.ds['intensity'] = (['time', 'y', 'x'], tdata)
+        self.ds['intensity'] = (['time', 'y', 'x'], tdata[:,::-1,:])
         self.ds.attrs['max_counts'] = self.ds.max_counts.max().data
         self.ds.attrs['min_counts'] = self.ds.min_counts.min().data
