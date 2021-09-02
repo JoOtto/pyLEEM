@@ -8,6 +8,9 @@ git clone git@github.com:JoOtto/pyLEEM.git
 cd pyLEEM
 pip install .
 ```
+## Getting started
+
+Please see the Examples Jupyter notebook for further instructions on the package usage.
 
 ## Testing
 
