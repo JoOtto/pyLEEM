@@ -183,8 +183,7 @@ def load_frame_data(dataset, data_slice=np.s_[:]):
 
             else:
                 if dataset.compression_code[i] == 3:
-                    tdata[i, :, :] = np.frombuffer(zlib.decompress(binary_image), dtype='<i2').cumsum().astype(
-                        np.uint8).astype(int).reshape((height, width))
+                    tdata[i, :, :] = np.frombuffer(zlib.decompress(binary_image), dtype='<i2').cumsum().reshape((height, width))
                 else:
                     tdata[i, :, :] = np.frombuffer(binary_image, dtype='<u2').reshape((height, width))
 
