@@ -71,6 +71,8 @@ def load_NLP(path, frame_loading="all"):
             load_frame_data(dataset)
         else:
             load_frame_data(np.s_[[0, 1, 2, 3, 4, -5, -4, -3, -2, -1]])
+
+        
     return dataset   
 def load_frame_meta_data(dataset):
     """
